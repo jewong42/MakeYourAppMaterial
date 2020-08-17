@@ -25,7 +25,7 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
-    <style name="Reader.Body1" parent="@style/TextAppearance.AppCompat.Body1">
+    <style name="Reader.ListItem.Body1" parent="@style/TextAppearance.AppCompat.Body1">
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:lines">1</item>
         <item name="android:ellipsize">end</item>
@@ -41,6 +41,10 @@
         <item name="android:shadowDx">2</item>
         <item name="android:shadowDy">2</item>
         <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="Reader.Detail.Body1" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/colorBlack</item>
     </style>
 
 </resources>

@@ -33,7 +33,7 @@
 
         <TextView
             android:id="@+id/article_title"
-            style="@style/Reader.Body1"
+            style="@style/Reader.ListItem.Body1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="8dp"
