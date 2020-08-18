@@ -79,7 +79,6 @@
         android:background="@color/colorWhite"
         android:fadingEdgeLength="24dp"
         android:paddingTop="16dp"
-        android:paddingBottom="@dimen/detail_body_bottom_margin"
         android:requiresFadingEdge="vertical"
         android:textAppearance="@style/Reader.Detail.Body1"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
