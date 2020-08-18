@@ -47,4 +47,12 @@
         <item name="android:textColor">@color/colorBlack</item>
     </style>
 
+    <style name="collapseTitleTextAppearance">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="expandedTitleTextAppearance">
+        <item name="android:singleLine">false</item>
+    </style>
+
 </resources>
