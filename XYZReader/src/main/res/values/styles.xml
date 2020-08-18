@@ -47,12 +47,12 @@
         <item name="android:textColor">@color/colorBlack</item>
     </style>
 
-    <style name="collapseTitleTextAppearance">
-        <item name="android:singleLine">true</item>
+    <style name="Reader.Toolbar" parent="@style/ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColorSecondary">@color/colorAccent</item>
     </style>
 
     <style name="expandedTitleTextAppearance">
-        <item name="android:singleLine">false</item>
+        <item name="android:textColor">@color/colorTransparent</item>
     </style>
 
 </resources>

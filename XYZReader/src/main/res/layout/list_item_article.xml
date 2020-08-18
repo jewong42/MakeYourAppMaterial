@@ -13,6 +13,8 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
+        android:paddingBottom="1dp"
+        android:background="@color/colorAccent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -27,7 +29,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/colorTranslucentDark"
+            android:background="@color/colorTranslucentPrimaryDark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="@id/article_title" />
 

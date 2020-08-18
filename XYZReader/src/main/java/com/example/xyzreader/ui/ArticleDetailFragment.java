@@ -15,6 +15,7 @@ import java.util.GregorianCalendar;
 
 import android.os.Bundle;
 import android.support.v4.app.ShareCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
@@ -107,7 +108,8 @@ public class ArticleDetailFragment extends Fragment implements
         });
         Toolbar mToolbar = (Toolbar) mRootView.findViewById(R.id.toolbar);
         getActivityCast().setSupportActionBar(mToolbar);
-        getActivityCast().getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar mActionBar = getActivityCast().getSupportActionBar();
+        mActionBar.setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,6 +137,7 @@ public class ArticleDetailFragment extends Fragment implements
             return;
         }
 
+        TextView titleView = (TextView) mRootView.findViewById(R.id.article_title);
         Toolbar toolbar = (Toolbar) mRootView.findViewById(R.id.toolbar);
         TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
         bylineView.setMovementMethod(new LinkMovementMethod());
@@ -146,6 +149,7 @@ public class ArticleDetailFragment extends Fragment implements
             mRootView.animate().alpha(1);
             Log.d("Jerry", "" + (mCursor.getString(ArticleLoader.Query.TITLE)));
             toolbar.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
+            titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
             Date publishedDate = parsePublishedDate();
             if (!publishedDate.before(START_OF_EPOCH.getTime())) {
                 bylineView.setText(Html.fromHtml(
@@ -184,6 +188,7 @@ public class ArticleDetailFragment extends Fragment implements
         } else {
             mRootView.setVisibility(View.GONE);
             toolbar.setTitle("N/A");
+            titleView.setText("N/A");
             bylineView.setText("N/A" );
             bodyView.setText("N/A");
         }
